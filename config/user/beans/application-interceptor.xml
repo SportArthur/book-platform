@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+
+	<bean id="interceptorList" class="com.souche.optimus.core.interceptor.InterceptorList"
+		autowire="byName">
+		<property name="interceptors">
+			<list>
+				<ref bean="apiInterceptorWrapper" />
+				<ref bean="loginInterceptorWrapper" />
+				<!-- <ref bean="requestInterceptorWrapper"/> -->
+			</list>
+		</property>
+	</bean>
+	<bean id="requestInterceptor" class="com.souche.insurance.web.interceptor.RequestInterceptor"/>
+	<!--APP -->
+	<bean id="requestInterceptorWrapper" class="com.souche.optimus.core.interceptor.InterceptorWrapper"
+		autowire="byName">
+		<property name="inteceptor" ref="requestInterceptor" />
+		<property name="includePatternList">
+			<list>
+				<value>/**</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!--APP -->
+	<bean id="apiInterceptorWrapper" class="com.souche.optimus.core.interceptor.InterceptorWrapper"
+		autowire="byName">
+		<property name="inteceptor" ref="apiInterceptor" />
+		<property name="includePatternList">
+			<list>
+				<value>/**</value>
+			</list>
+		</property>
+		<property name="excludePatternList">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="apiInterceptor" class="com.souche.insurance.web.interceptor.ApiInterceptor"
+		autowire="byName" />
+
+	<bean id="loginInterceptorWrapper" class="com.souche.optimus.core.interceptor.InterceptorWrapper"
+		autowire="byName">
+		<property name="inteceptor" ref="loginInterceptor" />
+		<!-- 拦截器BEAN的ID -->
+		<property name="includePatternList">
+			<list>
+				<value>/index.htm</value>
+				<value>/index.html</value>	
+				<value>/index2*</value>
+				<value>/api/**</value>
+				<value>/api/app/v3/**</value>
+				<value>/api/app/v1/**</value>
+				<value>/api/app/v2/**</value>
+				<value>/api/app/order/**</value>
+				<value>/api/app/user/**</value>
+				<value>/api/app/contract/**</value>
+				<value>/api/app/scheme/**</value>
+<!-- 				<value>/admin/**</value> -->
+			</list>
+		</property>
+		<property name="excludePatternList">
+			<list>
+				<value>/api/app/v2/qabizapi/queryQaInfoByCarId.json</value>
+				<value>/api/app/v2/qabizapi/queryqainfobycarId.json</value>
+				<value>/api/app/v3/AerovaneOrderApi/isAuthorized.json</value>
+				<value>/api/app/v3/aerovaneorderapi/isAuthorized.json</value>
+				<value>/api/app/v3/aerovaneorderapi/isauthorized.json</value>
+				<value>/api/app/v3/aerovaneorderapi/prompt.json</value>
+				<value>/api/app/v3/aerovaneorderapi/promptList.json</value>
+				<value>/api/ordercenterapi/weijinSettlementCallback.json</value>
+				<value>/api/app/contract/orderContractView.html</value>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="loginInterceptor" class="com.souche.sso.client2.OptimusLoginInterceptor">
+		<property name="env" value="${sso.env}" />
+		<!-- SSO登录域 -->
+		<property name="ssoExpire" value="${sso.expire}" />
+		<!-- 客户端失效时间,单位秒 -->
+		<property name="enabled" value="${sso.enable}" />
+		<!-- 开关 -->
+	</bean>
+
+	<bean id="memCacheService" class="com.souche.optimus.cache.Memcached"
+		init-method="init">
+		<!-- 被登录保护的 URL Pattern配置得一样 -->
+	</bean>
+
+</beans>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+定义框架提供的公共工具包及服务
+ -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+    default-autowire="byName"
+    default-lazy-init="true">
+
+    <bean id="basicDao"
+          class="com.souche.optimus.dao.BasicDaoImpl"
+          autowire="byName"/>
+
+    <!-- 连接池工厂配置 -->
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+          p:use-pool="true" p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.password}" />
+
+    <!-- redis请求实例配置 -->
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnectionFactory" />
+
+    <!-- 具体功能类 -->
+    <bean id="redisValueRepository" class="com.souche.optimus.redis.RedisValueRepository" >
+        <property name="redisTemplate" ref="redisTemplate" />
+    </bean>
+
+    <bean id="redisListRepository" class="com.souche.optimus.redis.RedisListRepository" >
+        <property name="redisTemplate" ref="redisTemplate" />
+    </bean>
+
+    <bean id="redisCountRepository" class="com.souche.optimus.redis.RedisCountRepository" >
+        <property name="redisTemplate" ref="redisTemplate" />
+    </bean>
+
+    <bean id="redisLock" class="com.souche.optimus.redis.RedisLock" >
+        <property name="redisTemplate" ref="redisTemplate" />
+    </bean>
+
+</beans>

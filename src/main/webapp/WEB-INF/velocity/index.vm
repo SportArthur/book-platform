@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="zhibaoApp">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <link rel="stylesheet" type="text/css" href="${assetServer}/projects/dafengche/zhibao-union/third-css/bootstrap.min.css?t=$!{timestamp_group_1}">
+    <link rel="stylesheet" type="text/css" href="${assetServer}/projects/dafengche/zhibao-union/third-css/datetimepicker.css?t=$!{timestamp_group_1}">
+    <link rel="stylesheet" type="text/css" href="${assetServer}/projects/dafengche/zhibao-union/css/authorize.css?t=$!{timestamp_group_1}">
+    <link rel="stylesheet" type="text/css" href="${assetServer}/projects/dafengche/zhibao-union/css/trade.css?t=$!{timestamp_group_1}">
+    <link rel="stylesheet" type="text/css" href="${assetServer}/projects/dafengche/zhibao-union/css/order.css?t=$!{timestamp_group_1}">
+    <link rel="stylesheet" type="text/css" href="${assetServer}/projects/dafengche/zhibao-union/css/order-form.css?t=$!{timestamp_group_1}">
+    <link rel="stylesheet" type="text/css" href="${assetServer}/projects/dafengche/zhibao-union/css/popup.css?t=$!{timestamp_group_1}">
+    <link rel="stylesheet" type="text/css" href="${assetServer}/projects/dafengche/zhibao-union/css/print.css?t=$!{timestamp_group_1}">
+    <script type="text/javascript" src="${assetServer}/projects/dafengche/zhibao-union/third-js/angular.min.js?t=$!{timestamp_group_1}"></script>
+    <script type="text/javascript" src="${assetServer}/projects/dafengche/zhibao-union/third-js/angular-ui-router.min.js?t=$!{timestamp_group_1}"></script>
+    <script type="text/javascript" src="${assetServer}/projects/dafengche/zhibao-union/third-js/jquery-1.11.3.min.js?t=$!{timestamp_group_1}" charset="utf-8"></script>
+    <script type="text/javascript" src="${assetServer}/projects/dafengche/zhibao-union/third-js/bootstrap.min.js?t=$!{timestamp_group_1}"></script>
+    <script type="text/javascript" src="${assetServer}/projects/dafengche/zhibao-union/third-js/bootstrap-datetimepicker.js?t=$!{timestamp_group_1}" charset="utf-8"></script>
+    <script type="text/javascript" src="${assetServer}/projects/dafengche/zhibao-union/third-js/bootstrap-datetimepicker.zh-CN.js?t=$!{timestamp_group_1}" charset="utf-8"></script>
+
+    <title> 质保 </title>
+    <script type="text/javascript">
+        SERVER_URI = '${serverUrl}';
+        TEMPLATE_URI = '${assetServer}/union/assets/auth';
+        TIMESTAMP_GROUP_1 = '$!{timestamp_group_1}';
+
+        _NAV = {
+            displayName: '${authZ.displayName}',
+            userName: '${authZ.userName}',
+            modifyPassword: '$!{uppwdUrl}',
+            logout: '$!{logoutUrl}'
+        }
+    </script>
+</head>
+<body>
+<!-- <a href = "/authorize.html"> 授权管理 </a> <br/> -->
+<!-- <a href = "/trade.html" > 交易管理 </a> <br/> -->
+<!-- < a href = "/order.html" > 质保管理 < /a> <br/ > -->
+<!-- < a href = "/order-form.html" > 修改 / 创建订单 < /a> <br/> -->
+<!-- <a href = "/contract.html"> 打印合同 </a> -->
+<div ui-view></div>
+
+
+<script type="text/javascript" src="/index.js?t=$!{timestamp_group_1}"></script>
+</body>
+</html>

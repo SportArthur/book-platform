@@ -1,0 +1,61 @@
+{
+    "name": "sad",
+    "version": "2.1.0",
+    "description": "sad framework",
+    "scripts": {
+        "i": "npm install --registry=http://registry.npm.souche-inc.com",
+        "build": "rm -rf ../webapp/resource && sad-entry && ./node_modules/@souche-f2e/atool-build/bin/atool-build -o ../webapp/resource",
+        "start": "./node_modules/@souche-f2e/sad-start/bin/sad-start -c webpack.config.js",
+        "lint": "./node_modules/.bin/eslint --ext js --ext jsx src || exit 0",
+        "postinstall": "npm-statistics"
+    },
+    "dependencies": {
+        "@souche-f2e/npm-statistics": "^0.2.2",
+        "@souche-f2e/sad": "^1.22.0",
+        "antd": "~2.13.13",
+        "i": "^0.3.6",
+        "moment": "^2.18.1",
+        "react": "15.4.2",
+        "react-addons-linked-state-mixin": "15.4.2",
+        "react-dom": "15.4.2",
+        "webpack": "2.4.1"
+    },
+    "devDependencies": {
+        "@souche-f2e/atool-build": "^1.0.0",
+        "@souche-f2e/sad-cli": "^0.10.0",
+        "@souche-f2e/sad-start": "^0.4.0",
+        "eslint": "^3.17.1",
+        "eslint-plugin-react": "^7.0.1",
+        "glob": "^7.1.1"
+    },
+    "license": "MIT",
+    "entry": {
+        "admin/blacklist/blacklistManage": "./pages/admin/blacklist/blacklistManage.jsx",
+        "admin/caraccess/CarAccessIndex": "./pages/admin/caraccess/CarAccessIndex.jsx",
+        "admin/checker/addCheckerArea": "./pages/admin/checker/addCheckerArea.jsx",
+        "admin/checker/checkerAreaIndex": "./pages/admin/checker/checkerAreaIndex.jsx",
+        "admin/checker/editCheckerArea": "./pages/admin/checker/editCheckerArea.jsx",
+        "admin/maintenance/maintenanceManage": "./pages/admin/maintenance/maintenanceManage.jsx",
+        "admin/order/OrderContractDetailIndex": "./pages/admin/order/OrderContractDetailIndex.jsx",
+        "admin/order/OrderDetailIndex": "./pages/admin/order/OrderDetailIndex.jsx",
+        "admin/order/OrderIndex": "./pages/admin/order/OrderIndex.jsx",
+        "admin/promotion/addRebateRule": "./pages/admin/promotion/addRebateRule.jsx",
+        "admin/promotion/rebateRuleIndex": "./pages/admin/promotion/rebateRuleIndex.jsx",
+        "admin/promotion/rebateRuleInfo": "./pages/admin/promotion/rebateRuleInfo.jsx",
+        "admin/rebatecalculate/rebateAuditDetail": "./pages/admin/rebatecalculate/rebateAuditDetail.jsx",
+        "admin/rebatecalculate/rebateAuditIndex": "./pages/admin/rebatecalculate/rebateAuditIndex.jsx",
+        "admin/scheme/CreateClaimConfig": "./pages/admin/scheme/CreateClaimConfig.jsx",
+        "admin/scheme/CreateScheme": "./pages/admin/scheme/CreateScheme.jsx",
+        "admin/scheme/SchemeClaimConfigIndex": "./pages/admin/scheme/SchemeClaimConfigIndex.jsx",
+        "admin/scheme/SchemeIndex": "./pages/admin/scheme/SchemeIndex.jsx",
+        "admin/scheme/UpdateScheme": "./pages/admin/scheme/UpdateScheme.jsx",
+        "admin/shopauthorize/ShopAuthorizeIndex": "./pages/admin/shopauthorize/ShopAuthorizeIndex.jsx",
+        "admin/shopcontract/shopContractDetail": "./pages/admin/shopcontract/shopContractDetail.jsx",
+        "admin/shopcontract/shopContractIndex": "./pages/admin/shopcontract/shopContractIndex.jsx",
+        "admin/warranty/claimOrderCheck": "./pages/admin/warranty/claimOrderCheck.jsx",
+        "admin/warranty/claims": "./pages/admin/warranty/claims.jsx",
+        "admin/warranty/repairOrderManage": "./pages/admin/warranty/repairOrderManage.jsx",
+        "admin/warranty/viewWarranty": "./pages/admin/warranty/viewWarranty.jsx",
+        "admin/warranty/warrantyAuditManage": "./pages/admin/warranty/warrantyAuditManage.jsx"
+    }
+}

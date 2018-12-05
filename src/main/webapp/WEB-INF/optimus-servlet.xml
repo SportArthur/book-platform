@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+        >
+
+    <context:annotation-config/>
+    <!-- 自动搜索@Controller标注的类 -->
+    <context:component-scan base-package="com.souche.**"/>
+    <context:component-scan base-package="com.souche.**.controller"/>
+    <context:component-scan base-package="com.souche.**.registry"/>
+    <context:component-scan base-package="com.souche.optimus.core.annotation"/>
+    <context:component-scan base-package="com.souche.sso.client2"/>
+    <!--加入SSO的包扫描路径 -->
+    <context:component-scan base-package="com.souche.insurance.*"/>
+
+    <bean id="configMap" class="org.springframework.beans.factory.config.MapFactoryBean">
+        <property name="sourceMap">
+            <map>
+                <entry key="basePackage" value="com.souche.insurance"/>
+                <entry key="resourceLoaderPath" value="../velocity"/>
+                <entry key="json_features"
+                       value="WriteMapNullValue,WriteDateUseDateFormat,DisableCheckSpecialChar,QuoteFieldNames,BrowserSecure"/>
+                <!-- 时间戳组 必须以 timestamp_group 开头, 可以根据需求任意添加-->
+                <entry key="timestamp_prefix" value="mvc_sample"/>
+                <!-- 最好加个前缀,防止跟人冲突 -->
+                <entry key="timestamp_group_1" value="20150508093453"/>
+                <entry key="timestamp_group_2" value="20150508093454"/>
+                <entry key="timestamp_group_3" value="20150508093455"/>
+            </map>
+        </property>
+    </bean>
+    <tx:annotation-driven/>
+    <mvc:annotation-driven/>
+    <mvc:interceptors>
+
+
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.souche.optimus.core.interceptor.PreRequestInterceptor" autowire="byName"/>
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.souche.optimus.core.interceptor.RequestIntercepAggregator" autowire="byName"/>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+
+
+    <!-- 视图解析器，所有modelview返回自动添加前后缀 -->
+    <bean id="velocityConfigurer"
+          class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath">
+            <value>WEB-INF/velocity/</value>
+        </property>
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">UTF-8</prop>
+                <prop key="output.encoding">UTF-8</prop>
+                <prop key="contentType">text/html;charset=UTF-8</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="velocityViewResolver"
+          class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="suffix">
+            <value>.vm</value>
+        </property>
+        <property name="dateToolAttribute">
+            <value>dateTool</value>
+        </property>
+        <property name="numberToolAttribute">
+            <value>numberTool</value>
+        </property>
+        <property name="toolboxConfigLocation" value="/WEB-INF/velocity-toolbox.xml"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <!-- velocity使用spring 宏 绑定表单域 -->
+        <property name="exposeSpringMacroHelpers">
+            <value>true</value>
+        </property>
+
+        <!-- 将servlet请求和会话中的属性复制到模型 -->
+        <property name="exposeRequestAttributes">
+            <value>true</value>
+        </property>
+        <property name="exposeSessionAttributes">
+            <value>true</value>
+        </property>
+        <property name="requestContextAttribute" value="rc"/>
+        <!--request属性引用名称 -->
+
+    </bean>
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="1"/>
+    </bean>
+
+    <!-- 配置静态资源的路径，比如js，和图片，不用被spring mvc进行解析处理 -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 配置文件上传 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="5000000"/>
+        <!-- 5M -->
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+
+    <!-- 异常解析器 -->
+    <bean id="exceptionResolver"
+          class="com.souche.insurance.web.interceptor.ExceptionResolver">
+    </bean>
+
+    <bean id="velocityEngine"
+          class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <props>
+                <prop key="com.souche.sso.exception.AccessDeniedException">/nopermission</prop> <!--错误页面-->
+                <prop key="com.souche.sso.inc.exception.AccessDeniedException">/nopermission</prop> <!--错误页面-->
+                <prop key="resource.loader">class</prop>
+                <prop key="class.resource.loader.class">
+                    org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+                </prop>
+                <prop key="input.encoding">UTF-8</prop>
+                <prop key="output.encoding">UTF-8</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean class="org.optimus.swagger.config.SwaggerOptimusConfig"></bean>
+
+</beans>

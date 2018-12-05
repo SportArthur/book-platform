@@ -1,0 +1,7 @@
+{
+    "devServer": {
+        "fePort": "8081",
+        "bePort": "8080",
+        "url": "http://local.souche-inc.com"
+    }
+}

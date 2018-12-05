@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="msapplication-TileImage" content="http://assets.souche.com/shop/assets/sso/favicon.ico">
+    <link rel="shortcut icon" href="http://assets.souche.com/shop/assets/sso/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/resource/common.css">
+    <link rel="stylesheet" href="/resource/${page}.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+<div id="content"></div>
+<script src="http://assets.souche.com/assets/js/lib/jquery-1.9.1.min.js?t=20151102"></script>
+<script src="http://assets.souche.com/shop/assets/order_manage/util/AuthZ/AuthZ.js"></script>
+<script>
+    AuthZ.config('${ssoUrl}/httpApi/getAuthZ.jsonp', true, 'jsonp');
+    var SERVER_URL = "${serverUrl}";
+</script>
+<script src="/resource/common.js"></script>
+<script src="/resource/${page}.js"></script>
+</body>
+</html>
