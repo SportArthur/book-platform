@@ -36,7 +36,7 @@ const moment = require('moment');
 /**
  * 订单管理
  */
-class OrderIndex extends SADPage {
+class BookOrderIndex extends SADPage {
     constructor() {
         super();
         this.state = {
@@ -592,13 +592,10 @@ class OrderIndex extends SADPage {
 
         const columns = [
             {
-                title: '质保编号',
-                dataIndex: 'qaId',
-                key: 'qaId',
-                display:false,
-                render: (text, record) => {
-                    return text;
-                }
+                title: '编号',
+                dataIndex: 'id',
+                key: 'id',
+                display:false
             },
             {
                 title: '订单编号',
@@ -619,166 +616,56 @@ class OrderIndex extends SADPage {
                     </div>;
                 }
             },{
-                title: '支付单号',
-                dataIndex: 'paymentOrderCode',
-                key: 'paymentOrderCode',
-                display:false
-            }, {
-                title: '会员订单',
-                dataIndex: 'isMember',
-                key: 'isMember',
-                display:false,
-                render: (text, record) => {
-                    if(text=='Y'){
-                        return "是";
-                    }else{
-                        return "否";
-                    }
-                }
-            },
-            {
-                title: '车辆信息',
-                dataIndex: 'vin',
-                key: 'vin',
-                display:false,
-                render: (text, record) => {
-                    let carHref=`http://f2e-assets.souche.com/cheniu/detail/car_source?id=${record.carId}`;
-                    return <div>
-                        <div>
-                            <a href={carHref}>{record.carName}</a>
-                        </div>
-                        <div>VIN码：{record.vin}</div>
-                        <div>车辆类型：{convertQaType(record.qaType)}</div>
-                    </div>;
-                }
-            },
-            {
-                title: '合同信息',
-                dataIndex: 'contractSerialNumber',
-                key: 'contractSerialNumber',
-                display:false,
-                render: (text, record) => {
-                    if(text!=null)
-                    {
-                        let contractDetailUrl=`/admin/order/OrderContractDetailIndex.html?contractNo=${record.contractSerialNumber}`;
-                        return <div>
-                            <div>
-                                <a target="_blank" href={contractDetailUrl}>{text}</a>
-                            </div>
-                            <div>
-                                已签署
-                            </div>
-                            <div>
-                                签署时间：{record.signContractDate}
-                            </div>
-                        </div>;
-                    }else{
-                        return <div>
-                            未签署
-                        </div>
-                    }
-
-                }
-            },
-            {
-                title: '订单来源',
-                dataIndex: 'orderSource',
-                key: 'orderSource',
-                display:false,
-                render: (text, record) => {
-                    return <div>
-                        <div>{convertOrderSource(text)}</div>
-                    </div>;
-                }
-            },
-            {
-                title: '车商',
-                dataIndex: 'shopName',
-                key: 'shopName',
-                display:false,
-                render: (text, record) => {
-                    return <div>
-                        <div>店铺编码：{record.shopCode}</div>
-                        <div>车商名称：{text}</div>
-                        <div>车商电话：{record.sellerPhone}</div>
-                        <div>卖家ID：{record.sellerId}</div>
-                        <div>卖家姓名：{record.sellerName}</div>
-                    </div>;
-                }
-            },
-            {
-                title: '客户信息',
+                title: '买家姓名',
                 dataIndex: 'buyerName',
                 key: 'buyerName',
-                display:false,
-                render: (text, record) => {
-                    return <div>
-                        <div>姓名：{text}</div>
-                        <div>身份证：{record.buyerIdentityId}</div>
-                        <div>客户手机：{record.buyerPhone}</div>
-                        <div>客户地址：{record.buyerAddress}</div>
-
-                    </div>;
-                }
+                display:false
+            }, {
+                title: '买家电话',
+                dataIndex: 'buyerPhone',
+                key: 'buyerPhone',
+                display:false
             },
             {
-                title: '质保信息',
-                dataIndex: 'insuranceOrderSchemeInfo',
-                key: 'insuranceOrderSchemeInfo',
-                render: (obj, record) => {
-                    return <div>
-                        <div>开启状态：{convertQaActive(record.qaActive)}</div>
-                        <div>产品名称：{obj.productName}</div>
-                        <div>产品信息：{obj.qaName}-{obj.name}</div>
-                        <div>订单金额：{record.guidePrice}元</div>
-                        <div>支付金额：{record.shouldPayPrice}元</div>
-                        <div>折扣：{record.discountProportion}%</div>
-                    </div>;
-                }
+                title: 'bookTime',
+                dataIndex: '预定时间',
+                key: '预定时间',
+                display:false
             },
             {
-                title: '保养信息',
-                dataIndex: 'baoyangStatus',
-                key: 'baoyangStatus',
-                display:false,
-                render: (text, record) => {
-                    return <div>
-                        <div>{convertBaoyangStatus(text)}</div>
-                    </div>;
-                }
+                title: '产品名称',
+                dataIndex: 'productName',
+                key: 'productName',
+                display:false
             },
             {
-                title: '延保状态',
-                dataIndex: 'extInsureChanceStatus',
-                key: 'extInsureChanceStatus',
-                display:false,
-                render: (text, record) => {
-                    return <div>
-                        <div>{convertExtInsureStatus(text)}</div>
-                    </div>;
-                }
-            },
-            {
-                title: '佣金',
-                dataIndex: 'commissionStatus',
-                key: 'commissionStatus',
-                display:false,
-                render: (text, record) => {
-                    return <div>
-                        <div>{convertCommissionStatus(text)}</div>
-                    </div>;
-                }
+                title: '产品价格',
+                dataIndex: 'productPrice',
+                key: 'productPrice',
+                display:false
             },
             {
                 title: '订单状态',
-                dataIndex: 'workflowStatusCode',
-                key: 'workflowStatusCode',
-                display:false,
-                render: (text, record) => {
-                    return <div>
-                        <div>{convertOrderWorkflowStatus(text)}</div>
-                    </div>;
-                }
+                dataIndex: 'orderStatus',
+                key: 'orderStatus',
+                display:false
+            },
+            {
+                title: '创建时间',
+                dataIndex: 'dateCreate',
+                key: 'dateCreate',
+                display:false
+            },
+            {
+                title: '修改时间',
+                dataIndex: 'dateUpdate',
+                key: 'dateUpdate'
+            },
+            {
+                title: '店铺编码',
+                dataIndex: 'shopCode',
+                key: 'shopCode',
+                display:false
             },
             {
                 title: '操作',
@@ -814,7 +701,7 @@ class OrderIndex extends SADPage {
         if (this.stateAlready) {
             return (
                 <div>
-                    <h1>质保-订单管理</h1>
+                    <h1>宽带预定-订单管理</h1>
                     <Form layout="inline"
                         className="ant-advanced-search-form"
                     >
@@ -859,5 +746,5 @@ class OrderIndex extends SADPage {
 
 }
 
-OrderIndex = Form.create()(OrderIndex);
-ReactDom.render(<div><OrderIndex></OrderIndex></div>, document.querySelector("#content"));
+BookOrderIndex = Form.create()(BookOrderIndex);
+ReactDom.render(<div><BookOrderIndex></BookOrderIndex></div>, document.querySelector("#content"));
