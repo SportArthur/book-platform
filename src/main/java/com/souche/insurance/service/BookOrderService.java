@@ -12,4 +12,5 @@ public interface BookOrderService {
 
 	Page<BookOrderModel> queryPageOrderList(BookOrderQueryParam orderQueryParam);
 	
+	Boolean updateOrder(BookOrderQueryParam orderQueryParam);
 }

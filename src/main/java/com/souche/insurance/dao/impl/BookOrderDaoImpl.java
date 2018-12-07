@@ -47,6 +47,9 @@ public class BookOrderDaoImpl implements BookOrderDao {
 		queryObj.setPage(param.getPage());
 		QueryParam queryParam = new QueryParam();
 
+		if (param.getOrderStatus() != null) {
+			queryParam.andParameter(" orderStatus >= #{orderStatus} ", param.getOrderStatus());
+		}
 		if (StringUtil.isNotEmpty(param.getDateCreateStart())) {
 			queryParam.andParameter(" dateCreate >= #{dateCreateStart} ", param.getDateCreateStart());
 		}
@@ -54,10 +57,10 @@ public class BookOrderDaoImpl implements BookOrderDao {
 			queryParam.andParameter(" dateCreate <= #{dateCreateEnd} ", param.getDateCreateEnd());
 		}
 		if (StringUtil.isNotEmpty(param.getBookTimeStart())) {
-			queryParam.andParameter(" dateCreate >= #{bookTimeStart} ", param.getBookTimeStart());
+			queryParam.andParameter(" bookTime >= #{bookTimeStart} ", param.getBookTimeStart());
 		}
 		if (StringUtil.isNotEmpty(param.getBookTimeEnd())) {
-			queryParam.andParameter(" dateCreate <= #{bookTimeEnd} ", param.getBookTimeEnd());
+			queryParam.andParameter(" bookTime <= #{bookTimeEnd} ", param.getBookTimeEnd());
 		}
 		queryObj.setQueryParam(queryParam);
 		List<OrderParam> orderParams = new ArrayList<OrderParam>();
@@ -65,6 +68,12 @@ public class BookOrderDaoImpl implements BookOrderDao {
 		queryObj.setOrderParams(orderParams);
 		Page<BookOrderModel> page = basicDao.queryPage(queryObj, BookOrderModel.class);
 		return page;
+	}
+
+	@Override
+	public Boolean updateOrder(BookOrderDO orderDO) {
+		int update = basicDao.update(orderDO);
+		return update > 0;
 	}
 
 }

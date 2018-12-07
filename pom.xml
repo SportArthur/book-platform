@@ -10,7 +10,7 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.souche</groupId>
+	<groupId>com.lilie</groupId>
 	<artifactId>book-platform</artifactId>
 	<name>book-platform</name>
 	<packaging>war</packaging>

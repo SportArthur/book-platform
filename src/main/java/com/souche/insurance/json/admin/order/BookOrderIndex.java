@@ -38,7 +38,7 @@ public class BookOrderIndex extends AbstractReactAction {
 		return map;
 	}
 
-	@ReactAction(desc = "获取车商合同列表")
+	@ReactAction(desc = "获取订单列表")
 	public void getList(@Json(value = "state.query", defaultValue = "") JSONObject query,
 			@Param(value = "state.page", defaultValue = "1") Integer page,
 			@Param(value = "state.pageSize", defaultValue = "10") Integer pageSize) {
@@ -47,6 +47,13 @@ public class BookOrderIndex extends AbstractReactAction {
 		orderQueryParam.setPage(page);
 		orderQueryParam.setPageSize(pageSize);
 		state.set("list", bookOrderService.queryPageOrderList(orderQueryParam));
+	}
+
+	@ReactAction(desc = "修改订单状态")
+	public void handleOrderStatus(@Json(value = "state.query", defaultValue = "") JSONObject query) {
+		State state = super.getState();
+		BookOrderQueryParam orderQueryParam = JSONObject.parseObject(query.toJSONString(), BookOrderQueryParam.class);
+		state.set("result", bookOrderService.updateOrder(orderQueryParam));
 	}
 
 }

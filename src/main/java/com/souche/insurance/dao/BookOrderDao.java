@@ -1,5 +1,6 @@
 package com.souche.insurance.dao;
 
+import com.souche.insurance.model.BookOrderDO;
 import com.souche.insurance.model.BookOrderModel;
 import com.souche.insurance.model.BookOrderQueryParam;
 import com.souche.optimus.common.page.Page;
@@ -11,5 +12,7 @@ import com.souche.optimus.common.page.Page;
 public interface BookOrderDao {
 
 	Page<BookOrderModel> queryPageOrderList(BookOrderQueryParam orderQueryParam);
+
+	Boolean updateOrder(BookOrderDO orderDO);
 
 }
