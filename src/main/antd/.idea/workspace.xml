@@ -26,8 +26,8 @@
       <file leaf-file-name="addBookOrder.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+            <state relative-caret-position="269">
+              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#160#222#0" expanded="true" />
@@ -354,12 +354,12 @@
       <workItem from="1544178963793" duration="26000" />
       <workItem from="1544179009427" duration="3270000" />
       <workItem from="1544185938932" duration="631000" />
-      <workItem from="1544239658879" duration="2951000" />
+      <workItem from="1544239658879" duration="2984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141822000" />
+    <option name="totallyTimeSpent" value="141855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -618,8 +618,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        <state relative-caret-position="269">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#160#222#0" expanded="true" />
