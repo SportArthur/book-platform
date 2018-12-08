@@ -50,4 +50,15 @@ public class BookOrderServiceImpl implements BookOrderService {
 		}
 	}
 
+	@Override
+	public Boolean insertOrder(BookOrderDO orderDO) {
+		try {
+			log.info("新增订单:param={}", JsonUtils.toJson(orderDO));
+			return bookOrderDao.insertOrder(orderDO);
+		} catch (Exception e) {
+			log.error("新增订单失败！", e);
+			throw new InsuranceServiceException("新增订单失败！");
+		}
+	}
+
 }

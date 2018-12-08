@@ -1,5 +1,6 @@
 package com.souche.insurance.service;
 
+import com.souche.insurance.model.BookOrderDO;
 import com.souche.insurance.model.BookOrderModel;
 import com.souche.insurance.model.BookOrderQueryParam;
 import com.souche.optimus.common.page.Page;
@@ -13,4 +14,6 @@ public interface BookOrderService {
 	Page<BookOrderModel> queryPageOrderList(BookOrderQueryParam orderQueryParam);
 	
 	Boolean updateOrder(BookOrderQueryParam orderQueryParam);
+
+	Boolean insertOrder(BookOrderDO orderDO);
 }

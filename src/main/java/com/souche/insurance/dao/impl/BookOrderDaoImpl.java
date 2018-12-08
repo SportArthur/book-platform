@@ -75,5 +75,11 @@ public class BookOrderDaoImpl implements BookOrderDao {
 		int update = basicDao.update(orderDO);
 		return update > 0;
 	}
+	
+	@Override
+	public Boolean insertOrder(BookOrderDO orderDO) {
+		int insert = basicDao.insert(orderDO);
+		return insert > 0;
+	}
 
 }

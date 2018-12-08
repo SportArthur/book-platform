@@ -15,4 +15,6 @@ public interface BookOrderDao {
 
 	Boolean updateOrder(BookOrderDO orderDO);
 
+	Boolean insertOrder(BookOrderDO orderDO);
+
 }

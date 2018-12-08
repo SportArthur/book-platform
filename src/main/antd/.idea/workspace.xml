@@ -14,11 +14,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="utils.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/utils/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addBookOrder.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#160#222#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,7 +39,7 @@
       <file leaf-file-name="warrantyInfo.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/warrantyInfo.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6103">
+            <state relative-caret-position="6341">
               <caret line="373" column="50" selection-start-line="373" selection-start-column="50" selection-end-line="373" selection-end-column="50" />
             </state>
           </provider>
@@ -35,8 +48,8 @@
       <file leaf-file-name="BookOrderIndex.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/admin/order/BookOrderIndex.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="317" column="48" lean-forward="true" selection-start-line="317" selection-start-column="48" selection-end-line="317" selection-end-column="48" />
+            <state relative-caret-position="196">
+              <caret line="82" column="7" lean-forward="true" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#159#255#0" expanded="true" />
@@ -58,7 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>style</find>
       <find>dateCreate</find>
       <find>children</find>
       <find>ex&gt;&lt;/OrderIndex&gt;&lt;/div&gt;,</find>
@@ -88,6 +100,7 @@
       <find>handleInstall</find>
       <find>handleCancel</find>
       <find>conso</find>
+      <find>DatePicker</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -113,6 +126,7 @@
         <option value="$PROJECT_DIR$/pages/admin/order/OrderIndex.jsx" />
         <option value="$PROJECT_DIR$/pages/utils/utils.js" />
         <option value="$PROJECT_DIR$/pages/admin/order/BookOrderIndex.jsx" />
+        <option value="$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx" />
       </list>
     </option>
   </component>
@@ -141,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,6 +202,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,12 +220,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pages/admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pages/admin/order" />
       <recent name="$PROJECT_DIR$/pages/admin/rebatecalculate" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -339,18 +353,19 @@
       <workItem from="1544062980657" duration="13000" />
       <workItem from="1544178963793" duration="26000" />
       <workItem from="1544179009427" duration="3270000" />
-      <workItem from="1544185938932" duration="491000" />
+      <workItem from="1544185938932" duration="631000" />
+      <workItem from="1544239658879" duration="2752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138731000" />
+    <option name="totallyTimeSpent" value="141623000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20537125" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.205074" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -358,7 +373,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22577778" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22545454" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
@@ -389,13 +404,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/admin/warranty/repairOrderManage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6664">
-          <caret line="399" column="30" selection-start-line="399" selection-start-column="30" selection-end-line="399" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/rebatecalculate/rebateAuditIndex.jsx" />
     <entry file="file://$PROJECT_DIR$/pages/admin/checker/addCheckerArea.jsx" />
     <entry file="file://$PROJECT_DIR$/pages/admin/rebatecalculate/rebateAuditDetail.jsx" />
@@ -578,7 +586,7 @@
     <entry file="file://$PROJECT_DIR$/pages/admin/rebatecalculate/rebateAuditDetail.jsx" />
     <entry file="file://$PROJECT_DIR$/components/warrantyInfo.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6103">
+        <state relative-caret-position="6341">
           <caret line="373" column="50" selection-start-line="373" selection-start-column="50" selection-end-line="373" selection-end-column="50" />
         </state>
       </provider>
@@ -591,10 +599,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/utils/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/order/BookOrderIndex.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="317" column="48" lean-forward="true" selection-start-line="317" selection-start-column="48" selection-end-line="317" selection-end-column="48" />
+        <state relative-caret-position="196">
+          <caret line="82" column="7" lean-forward="true" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#159#255#0" expanded="true" />
@@ -602,10 +617,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/utils/utils.js">
+    <entry file="file://$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="201">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#160#222#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

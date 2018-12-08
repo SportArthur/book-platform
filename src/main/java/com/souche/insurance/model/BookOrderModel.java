@@ -23,8 +23,8 @@ public class BookOrderModel implements Serializable {
 	private Date dateCreate; // 创建时间
 	private Date dateUpdate; // 修改时间
 
-	private Integer page = 1; // 产品价格
-	private Integer pageSize = 10; // 订单状态 0：已预定，1：已服务 2：已关闭
+	private Integer page = 1;
+	private Integer pageSize = 10;
 
 	public Integer getId() {
 		return id;
