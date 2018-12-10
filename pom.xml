@@ -3,29 +3,20 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<parent>
+		<groupId>com.souche</groupId>
+		<artifactId>zhibao-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
 	<groupId>com.lilie</groupId>
 	<artifactId>book-platform</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
 	<name>book-platform</name>
 	<packaging>war</packaging>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<java.version>1.7</java.version>
-        <optimus.version>1.5.5</optimus.version>
-        <spring.version>4.3.2.RELEASE</spring.version>
-        <cglib.version>2.2.2</cglib.version>
-        
-        <slf4j.version>1.7.21</slf4j.version>
-		<poi.version>3.17</poi.version>
-        <timestamp>${maven.build.timestamp}</timestamp>
-        <project.encoding>utf-8</project.encoding>
-        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-        
-		<dubbo.version>2.6.8</dubbo.version>
-		<javassist.version>3.20.0-GA</javassist.version>
-		<asm.version>4.2</asm.version>
-		<sso.client2.version>1.4.6-SNAPSHOT</sso.client2.version>
 
 	</properties>
 
@@ -120,223 +111,269 @@
 		<dependency>
 			<groupId>com.souche</groupId>
 			<artifactId>optimus-core</artifactId>
-			<version>${optimus.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>optimus-search</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aliyun.openservices</groupId>
+			<artifactId>ons-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.souche</groupId>
-			<artifactId>optimus-orm</artifactId>
-			<version>${optimus.version}</version>
+			<artifactId>optimus-swagger</artifactId>
 		</dependency>
-		
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>optimus-upload</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>optimus-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>optimus-remoting-bean</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>scashier-sdk</artifactId>
+		</dependency>
+		<!--订单中心 -->
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>order-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>souche-inc-shield-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>sso.client2.optimus</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>sso.client.common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>user-hessian-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>car-hessian-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche.common</groupId>
+			<artifactId>common-hessian-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche.common</groupId>
+			<artifactId>common-hessian-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>zhibao-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>zhibao-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>common-result</artifactId>
+		</dependency>
+
+		<!--依赖内部其他系统的接口 start ******************* -->
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>contract-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>souche-dictionary-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>product-hessian-api</artifactId>
+		</dependency>
+		<!--新启用 接大风车店铺 -->
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>shop-api</artifactId>
+		</dependency>
+		<!--依赖内部其他系统的接口 end ********************** -->
+
 		<!--outside dependencies -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.16.8</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
-			<version>2.0.59-beta</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>${spring.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>1.3.2</version>
 		</dependency>
 
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
-			<version>1.3.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>2.4</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
-			<version>2.1</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.16</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
-			<version>${slf4j.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
 			<artifactId>json-path</artifactId>
-			<version>2.2.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.11</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>${poi.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>${poi.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.5.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
-			<version>4.4.3</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
-			<version>${dubbo.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.javassist</groupId>
 			<artifactId>javassist</artifactId>
-			<version>${javassist.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.ow2.asm</groupId>
 			<artifactId>asm</artifactId>
-			<version>${asm.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.ow2.asm</groupId>
 			<artifactId>asm-commons</artifactId>
-			<version>${asm.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.ow2.asm</groupId>
 			<artifactId>asm-util</artifactId>
-			<version>${asm.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
-			<version>1.8.13</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
-			<version>1.8.13</version>
 		</dependency>
 
 		<dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
-			<version>1.2</version>
-			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.souche</groupId>
+			<artifactId>car-model-api</artifactId>
 		</dependency>
 
 		<!-- optimus-mq的依赖 -->
 		<dependency>
 			<groupId>org.logback-extensions</groupId>
 			<artifactId>logback-ext-spring</artifactId>
-			<version>0.1.5</version>
 		</dependency>
 	</dependencies>
 
@@ -348,7 +385,7 @@
 				<artifactId>config</artifactId>
 				<version>1.0.5</version>
 				<configuration>
-					<app>book-platform</app>
+					<app>zhibao-web</app>
 				</configuration>
 			</plugin>
 			<plugin>

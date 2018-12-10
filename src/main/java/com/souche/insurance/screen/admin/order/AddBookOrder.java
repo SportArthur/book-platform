@@ -13,9 +13,9 @@ import com.souche.optimus.core.sad.AbstractReactScreen;
  *
  */
 @View
-public class BookOrderDetail extends AbstractReactScreen {
+public class AddBookOrder extends AbstractReactScreen {
 	public void execute(Context context, Navigator nav, HttpServletRequest request) {
 		context = super.buildContext(context, request);
-		nav.forwardTo("/admin/order/bookOrderDetail");
+		nav.forwardTo("/admin/order/addBookOrder");
 	}
 }
