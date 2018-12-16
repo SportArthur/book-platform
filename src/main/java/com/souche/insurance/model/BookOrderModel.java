@@ -20,6 +20,7 @@ public class BookOrderModel implements Serializable {
 	private String productName; // 产品名称
 	private Integer productPrice; // 产品价格
 	private Integer orderStatus; // 订单状态 0：已预定，1：已服务 2：已关闭
+	private String remarks; // 备注
 	private Date dateCreate; // 创建时间
 	private Date dateUpdate; // 修改时间
 
@@ -96,6 +97,14 @@ public class BookOrderModel implements Serializable {
 
 	public void setOrderStatus(Integer orderStatus) {
 		this.orderStatus = orderStatus;
+	}
+
+	public String getRemarks() {
+		return remarks;
+	}
+
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
 	}
 
 	public Date getDateCreate() {

@@ -14,23 +14,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/utils/utils.js">
+      <file leaf-file-name="addBookOrder.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="307">
+              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addBookOrder.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx">
+      <file leaf-file-name="BookShopIndex.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/admin/shop/BookShopIndex.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            <state relative-caret-position="263">
+              <caret line="258" column="14" lean-forward="true" selection-start-line="258" selection-start-column="14" selection-end-line="258" selection-end-column="14" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#159#255#0" expanded="true" />
+                <element signature="e#423#482#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addBookShop.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/admin/shop/addBookShop.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1962">
+              <caret line="127" column="31" lean-forward="true" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -47,8 +60,8 @@
       <file leaf-file-name="BookOrderIndex.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/admin/order/BookOrderIndex.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+            <state relative-caret-position="331">
+              <caret line="287" column="38" lean-forward="true" selection-start-line="287" selection-start-column="38" selection-end-line="287" selection-end-column="38" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#159#255#0" expanded="true" />
@@ -57,26 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopContractIndex.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/admin/shopcontract/shopContractIndex.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2465">
-              <caret line="151" column="26" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dateCreate</find>
-      <find>children</find>
-      <find>ex&gt;&lt;/OrderIndex&gt;&lt;/div&gt;,</find>
-      <find>创建时间</find>
-      <find>SubMenu</find>
-      <find>getFields</find>
-      <find>moreSearchShow</find>
       <find>iconDirection</find>
       <find>handShowMoreSearch</find>
       <find>util</find>
@@ -100,6 +97,13 @@
       <find>handleCancel</find>
       <find>conso</find>
       <find>DatePicker</find>
+      <find>common</find>
+      <find>订单</find>
+      <find>convertAuthStatus</find>
+      <find>handleOrderStatus</find>
+      <find>authBtn</find>
+      <find>加</find>
+      <find>handSubmit</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -124,6 +128,9 @@
         <option value="$PROJECT_DIR$/components/warrantyInfo.jsx" />
         <option value="$PROJECT_DIR$/pages/admin/order/OrderIndex.jsx" />
         <option value="$PROJECT_DIR$/pages/utils/utils.js" />
+        <option value="$PROJECT_DIR$/pages/admin/shop/bookShopIndex.jsx" />
+        <option value="$PROJECT_DIR$/pages/admin/shop/BookShopIndex.jsx" />
+        <option value="$PROJECT_DIR$/pages/admin/shop/addBookShop.jsx" />
         <option value="$PROJECT_DIR$/pages/admin/order/BookOrderIndex.jsx" />
         <option value="$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx" />
       </list>
@@ -146,8 +153,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -189,7 +196,7 @@
               <item name="antd" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="shopcontract" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="antd" type="b2602c69:ProjectViewProjectNode" />
@@ -205,7 +212,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="OrderDetailIndex&#9;null&#9;null&#10;shopContractIndex&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/shopcontract/shopContractIndex.jsx&#10;ShopAuthorizeIndex&#9;null&#9;null&#10;OrderIndex&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/order/OrderIndex.jsx&#10;RepairOrderManage&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/warranty/repairOrderManage.jsx&#10;OrderContractDetailIndex&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/order/OrderContractDetailIndex.jsx&#10;ShopContractDetail&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/shopcontract/shopContractDetail.jsx&#10;addCheckerArea&#9;null&#9;null&#10;rebateAuditDetail&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/rebatecalculate/rebateAuditDetail.jsx&#10;checkerAreaIndex&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/checker/checkerAreaIndex.jsx&#10;repairOrderManage&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/warranty/repairOrderManage.jsx" />
+    <property name="SearchEverywhereHistoryKey" value="template.&#9;FILE&#9;file:///Users/arthur/book-platform/src/main/antd/template.html&#10;common.js&#9;FILE&#9;file:///Users/arthur/book-platform/src/main/antd/node_modules/glob/common.js&#10;OrderDetailIndex&#9;null&#9;null&#10;shopContractIndex&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/shopcontract/shopContractIndex.jsx&#10;ShopAuthorizeIndex&#9;null&#9;null&#10;OrderIndex&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/order/OrderIndex.jsx&#10;RepairOrderManage&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/warranty/repairOrderManage.jsx&#10;OrderContractDetailIndex&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/order/OrderContractDetailIndex.jsx&#10;ShopContractDetail&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/shopcontract/shopContractDetail.jsx&#10;addCheckerArea&#9;null&#9;null&#10;rebateAuditDetail&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/rebatecalculate/rebateAuditDetail.jsx&#10;checkerAreaIndex&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/checker/checkerAreaIndex.jsx&#10;repairOrderManage&#9;FILE&#9;file:///Users/arthur/git/souche-inc-insurance/zhibao-web/src/main/antd/pages/admin/warranty/repairOrderManage.jsx" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -219,12 +226,13 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pages/admin/order" />
-      <recent name="$PROJECT_DIR$/pages/admin/rebatecalculate" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pages/admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/admin/shop" />
+      <recent name="$PROJECT_DIR$/pages/admin/order" />
+      <recent name="$PROJECT_DIR$/pages/admin/rebatecalculate" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -355,17 +363,21 @@
       <workItem from="1544185938932" duration="631000" />
       <workItem from="1544239658879" duration="2984000" />
       <workItem from="1544274974213" duration="389000" />
-      <workItem from="1544362562292" duration="225000" />
+      <workItem from="1544362562292" duration="946000" />
+      <workItem from="1544428139749" duration="162000" />
+      <workItem from="1544583316763" duration="20000" />
+      <workItem from="1544926878308" duration="5806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142469000" />
+    <option name="totallyTimeSpent" value="149178000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15323855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22128259" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -373,7 +385,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22488889" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.16363636" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
@@ -404,16 +416,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/admin/rebatecalculate/rebateAuditIndex.jsx" />
-    <entry file="file://$PROJECT_DIR$/pages/admin/checker/addCheckerArea.jsx" />
-    <entry file="file://$PROJECT_DIR$/pages/admin/rebatecalculate/rebateAuditDetail.jsx" />
-    <entry file="file://$PROJECT_DIR$/pages/admin/warranty/repairOrderManage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6783">
-          <caret line="399" column="30" selection-start-line="399" selection-start-column="30" selection-end-line="399" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/rebatecalculate/rebateAuditIndex.jsx" />
     <entry file="file://$PROJECT_DIR$/pages/admin/rebatecalculate/rebateAuditDetail.jsx" />
     <entry file="file://$PROJECT_DIR$/pages/admin/warranty/repairOrderManage.jsx">
@@ -596,17 +598,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="1626" column="42" lean-forward="true" selection-start-line="1626" selection-start-column="42" selection-end-line="1626" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/glob/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/utils/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/admin/shop/BookShopIndex.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="258" column="14" lean-forward="true" selection-start-line="258" selection-start-column="14" selection-end-line="258" selection-end-column="14" />
+          <folding>
+            <element signature="e#159#255#0" expanded="true" />
+            <element signature="e#423#482#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/order/BookOrderIndex.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+        <state relative-caret-position="331">
+          <caret line="287" column="38" lean-forward="true" selection-start-line="287" selection-start-column="38" selection-end-line="287" selection-end-column="38" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#159#255#0" expanded="true" />
@@ -614,10 +641,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/admin/shop/addBookShop.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1962">
+          <caret line="127" column="31" lean-forward="true" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/order/addBookOrder.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        <state relative-caret-position="307">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

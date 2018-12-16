@@ -32,8 +32,8 @@
     "entry": {
         "admin/order/addBookOrder": "./pages/admin/order/addBookOrder.jsx",
         "admin/order/BookOrderIndex": "./pages/admin/order/BookOrderIndex.jsx",
-        "admin/shopcontract/shopContractDetail": "./pages/admin/shopcontract/shopContractDetail.jsx",
-        "admin/shopcontract/shopContractIndex": "./pages/admin/shopcontract/shopContractIndex.jsx",
+        "admin/shop/addBookShop": "./pages/admin/shop/addBookShop.jsx",
+        "admin/shop/BookShopIndex": "./pages/admin/shop/BookShopIndex.jsx",
         "admin/warranty/claimOrderCheck": "./pages/admin/warranty/claimOrderCheck.jsx",
         "admin/warranty/claims": "./pages/admin/warranty/claims.jsx",
         "admin/warranty/repairOrderManage": "./pages/admin/warranty/repairOrderManage.jsx",

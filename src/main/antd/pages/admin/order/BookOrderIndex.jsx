@@ -284,6 +284,12 @@ class BookOrderIndex extends SADPage {
                 }
             },
             {
+                title: '店铺编码',
+                dataIndex: 'shopCode',
+                key: 'shopCode',
+                display:false
+            },
+            {
                 title: '创建时间',
                 dataIndex: 'dateCreate',
                 key: 'dateCreate',
@@ -295,10 +301,9 @@ class BookOrderIndex extends SADPage {
                 key: 'dateUpdate'
             },
             {
-                title: '店铺编码',
-                dataIndex: 'shopCode',
-                key: 'shopCode',
-                display:false
+                title: '备注',
+                dataIndex: 'remarks',
+                key: 'remarks'
             },
             {
                 title: '操作',
@@ -339,6 +344,11 @@ class BookOrderIndex extends SADPage {
                                 </FormItem>
                                 <FormItem >
                                     <Button type="primary" onClick={this.handleReset}>清除</Button>
+                                </FormItem>
+                                <FormItem >
+                                    <Button type="primary">
+                                        <a target="_blank" href="/admin/order/addBookOrder.html">新建</a>
+                                    </Button>
                                 </FormItem>
                             </Col>
                         </Row>}

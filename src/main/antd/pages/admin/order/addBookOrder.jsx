@@ -28,6 +28,11 @@ class AddBookOrder extends SADPage {
      */
     handSubmit = () => {
         this.state.query = this.props.form.getFieldsValue();
+        let shopCode = '';
+        let url = window.location.href;
+        shopCode = url.substr(url.indexOf('=')+1);
+
+        this.state.query.shopCode = shopCode;
             this.addOrder().then(data => {
             if (data.success) {
                 alert('新增预定安装订单成功！');

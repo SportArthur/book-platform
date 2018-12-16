@@ -16,6 +16,22 @@ export function convertOrderStatus(status) {
             return '-';
     }
 }
+// 授权状态
+export function convertAuthStatus(status) {
+    if(typeof(status) == 'undefined') {
+        return '-';
+    }
+    switch (status) {
+        case 0:
+            return '未授权';
+        case 1:
+            return '已授权';
+        case 2:
+            return '已取消';
+        default:
+            return '-';
+    }
+}
 
 // 时间格式化
 export function formatTime(time, pattern) {
