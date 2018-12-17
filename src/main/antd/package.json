@@ -4,7 +4,7 @@
     "description": "sad framework",
     "scripts": {
         "i": "npm install --registry=http://registry.npm.souche-inc.com",
-        "build": "rm -rf ../webapp/resource && sad-entry && ./node_modules/@souche-f2e/atool-build/bin/atool-build -o ../webapp/resource",
+        "build": "rm -rf ../webapp/resource && sad-entry && ./node_modules/@souche-f2e/atool-build/bin/atool-build --config ./webpack.production.config -o ../webapp/resource",
         "start": "./node_modules/@souche-f2e/sad-start/bin/sad-start -c webpack.config.js",
         "lint": "./node_modules/.bin/eslint --ext js --ext jsx src || exit 0",
         "postinstall": "npm-statistics"
